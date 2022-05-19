@@ -1,0 +1,29 @@
+aws:
+  accounts:
+    - account_id: "123456789012"
+      name: "Production"
+      role_arn: "arn:aws:iam::123456789012:role/S3AuditorRole"
+  
+  regions:
+    - us-east-1
+    - us-west-2
+
+analysis:
+  transition_rules:
+    standard_to_ia: 30
+    ia_to_intelligent: 90
+    to_glacier: 180
+    to_deep_archive: 365
+  
+  min_object_size: 128000
+  
+  storage_costs:
+    standard: 0.023
+    standard_ia: 0.0125
+    intelligent_tiering: 0.0025
+    glacier: 0.004
+    deep_archive: 0.00099
+
+reporting:
+  output_dir: "./reports"
+  format: "csv"

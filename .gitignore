@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+ENV/
+
+# Reports
+reports/
+*.csv
+
+# Config
+config.local.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
